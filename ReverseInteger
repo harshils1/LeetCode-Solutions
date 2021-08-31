@@ -1,0 +1,28 @@
+public class ReverseInteger {
+    public static void main(String[] args) {
+
+        int x = -43243;
+        String newX = "";
+        String noNegative = "";
+        int finalX = 0;
+
+        if (x > 0) {
+            while (x > 0) {
+                newX += x % 10;
+                x = x / 10;
+            }
+        } else {
+            noNegative += "" + x;
+            noNegative = noNegative.substring(1);
+            finalX = Integer.parseInt(noNegative);
+            while (finalX > 0) {
+                newX += finalX % 10;
+                finalX = finalX / 10;
+            }
+            newX = "-" + newX;
+        }
+
+
+        System.out.print(newX);
+    }
+}
