@@ -1,0 +1,23 @@
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println(largestOddNumber("50001"));
+    }
+
+    public static String largestOddNumber(String num) {
+        int odd;
+        int lodd = 0;
+        String odd1 = "";
+
+        for (int i = 1; i <= num.length(); i++) {
+            odd = Integer.parseInt(num.substring(0, i));
+            if (odd % 2 != 0) {
+                if (odd > lodd) {
+                    lodd = odd;
+                }
+            }
+        }
+        odd1 = "" + lodd;
+        return odd1;
+    }
+}
